@@ -39,7 +39,7 @@ def create_month_directories(base_dir, year ,months, sample_file):
 
 def copy_sample_file(directory, sample_file):
     for x in xrange(0, DEFAULT_NUMBER_SAMPLE_FILES + 1):
-        destination_file = os.path.join(directory, os.path.basename(sample_file) + '_' + str(x))
+        destination_file = os.path.join(directory, str(x) + '_' + os.path.basename(sample_file))
         print("Copying sample file to %s" % destination_file)
         copyfile(sample_file, destination_file)
 
